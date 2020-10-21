@@ -1,0 +1,40 @@
+$primary-color: #51a199;
+
+.subtotal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 111px;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+
+  button {
+    background-color: $primary-color;
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    border: 1px solid $primary-color;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    outline: none;
+  }
+
+  button:hover {
+    background-color: #fff;
+    color: $primary-color;
+  }
+}
+
+.gift {
+  display: flex;
+  align-items: center;
+  input {
+    margin-right: 5px;
+  }
+}

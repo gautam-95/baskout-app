@@ -1,0 +1,83 @@
+$primary-color: #51a199;
+
+.payment {
+  background-color: #fff;
+}
+
+.container {
+  > div {
+    display: flex;
+    padding: 20px;
+    margin: 0 20px;
+    border-bottom: 1px solid lightgray;
+    flex-wrap: wrap;
+  }
+
+  .title {
+    flex: 0.2;
+  }
+
+  h1 {
+    text-align: center;
+    padding: 10px;
+    font-weight: 400;
+    background-color: rgb(234, 237, 237);
+    border-bottom: 1px solid lightgray;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.address,
+.items,
+.details {
+  flex: 0.8;
+}
+
+.details {
+  min-width: 240px;
+  form {
+    max-width: 400px;
+    div > button {
+      background-color: $primary-color;
+      margin-top: 10px;
+      padding: 5px 8px;
+      border-radius: 20px;
+      border: none;
+      color: #fff;
+      border: 1px solid $primary-color;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      outline: none;
+    }
+
+    div > button:hover {
+      background-color: #fff;
+      color: $primary-color;
+    }
+  }
+
+  h3 {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    .title {
+      flex: 1;
+    }
+    > div {
+      padding: 20px 0;
+    }
+  }
+
+  .address,
+  .items,
+  .details {
+    flex: 1;
+  }
+
+}

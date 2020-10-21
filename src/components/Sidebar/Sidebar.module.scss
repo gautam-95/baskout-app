@@ -1,0 +1,29 @@
+$primary-color: #51a199;
+
+.sideBar {
+  padding: 2%;
+  img {
+    height: 45px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    padding-left: 10px;
+  }
+
+  > span {
+      color: #51a199;
+      padding-left: 18px;
+  }
+
+  > div {
+    margin-top: 25px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:global(.MuiPaper-root) {
+  padding-top: 4%;
+}

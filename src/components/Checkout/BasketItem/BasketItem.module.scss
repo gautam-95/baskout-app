@@ -1,0 +1,55 @@
+$primary-color: #51a199;
+
+.basketItem {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: flex-start;
+  // min-width: 345px;
+
+  img {
+    object-fit: contain;
+    width: 180px;
+    height: 180px;
+  }
+
+  > div {
+    // padding-left: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+    p:first-child {
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    button {
+      background-color: $primary-color;
+      margin-top: 10px;
+      padding: 5px 8px;
+      border-radius: 20px;
+      border: none;
+      color: #fff;
+      border: 1px solid $primary-color;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      outline: none;
+    }
+
+    button:hover {
+      background-color: #fff;
+      color: $primary-color;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .basketItem {
+    width: 315px;
+    justify-content: center;
+
+    button {
+      transform: translateX(65%);
+    }
+  }
+}

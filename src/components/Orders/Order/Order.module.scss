@@ -1,0 +1,31 @@
+.order {
+  padding: 40px;
+  margin: 20px 0;
+  border: 1px solid lightgray;
+  background-color: #fff;
+  position: relative;
+
+  > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  // .orderId {
+  //   position: absolute;
+  //   top: 40px;
+  //   right: 20px;
+  // }
+
+  .orderTotal {
+    font-weight: 500;
+    text-align: right;
+  }
+}
+
+@media (max-width: 500px) {
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
