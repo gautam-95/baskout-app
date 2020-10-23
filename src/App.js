@@ -5,7 +5,6 @@ import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Checkout from "./components/Checkout/Checkout";
 import Login from "./components/Auth/Login";
-import { auth } from "./firebase/firebase";
 import Payment from "./components/Checkout/Payment/Payment";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
@@ -26,26 +25,7 @@ function App() {
 
   useEffect(() => {
     dispatch(authActions.autoLogin());
-  })
-
-  // useEffect(() => {
-  //   auth.onAuthStateChanged((authUser) => {
-  //     console.log("user is =>>", authUser);
-  //     if (authUser) {
-  //       // handle user logged in
-  //       dispatch({
-  //         type: "SET_USER",
-  //         user: authUser,
-  //       });
-  //     } else {
-  //       // handle user logged out
-  //       dispatch({
-  //         type: "SET_USER",
-  //         user: null,
-  //       });
-  //     }
-  //   });
-  // }, [dispatch]);
+  });
 
   return (
     <Router>

@@ -1,10 +1,9 @@
 const User = require("../models/user");
 
 exports.addOrderToUser = (req, res) => {
-  console.log(req.body);
   User.findOneAndUpdate(
     { _id: req.body.userId },
-    { $push: { orders: req.body.orders } }
+    { $push: { orders: req.body.orders[0] } }
   )
     .then((result) => {
       res.status(200).json({
@@ -13,7 +12,6 @@ exports.addOrderToUser = (req, res) => {
       });
     })
     .catch((err) => {
-      console.log(err);
       res.status(500).json({
         message: "Error adding orders",
       });

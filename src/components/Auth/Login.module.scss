@@ -1,11 +1,18 @@
 $primary-color: #51a199;
 
 .login {
+  padding-top: 2%;
   display: flex;
+  padding-left: 8%;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   height: 100vh;
   background-color: #fff;
+  // background-image: url(/static/media/login-bg.573e8449.jpg);
+  background-image: url('../../assets/images/login-bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+  // mask-image: linear-gradient(to bottom right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6));
 }
 
 .logo {
@@ -20,7 +27,7 @@ $primary-color: #51a199;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  border: 1px solid lightgray;
+  // border: 1px solid lightgray;
   padding: 20px;
 
   h1 {
@@ -91,4 +98,10 @@ $primary-color: #51a199;
   height: 30px;
   margin-top: 10px;
   border-color: darkgray;
+}
+
+@media (max-width: 500px) {
+  .login {
+    padding-left: 4%;
+  }
 }

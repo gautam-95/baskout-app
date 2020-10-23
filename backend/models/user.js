@@ -7,6 +7,7 @@ const userSchema = mongoose.Schema({
   orders: [
     {
       orderId: String,
+      paymentId: { type: String },
       products: [{ type: mongoose.Schema.Types.ObjectId, ref: "Product" }],
       amount: Number,
       created: String,

@@ -8,9 +8,10 @@ const Order = ({ order }) => {
   return (
     <div className={styles.order}>
       <div>
-        <h2>Order</h2>
-        <p className={styles.orderId}>
-          <small>{order._id}</small>
+        <h3 className={styles.orderTitle}>Order #{order._id}</h3>
+        <p className={styles.paymentId}>
+          <h4>Payment Id</h4>
+          <small>{order.paymentId}</small>
         </p>
       </div>
 
@@ -18,7 +19,7 @@ const Order = ({ order }) => {
       <div className={styles.items}>
         {order.products?.map((item) => (
           <BasketItem
-            key={item._id + + Math.floor(Math.random() * 1000) + 1}
+            key={item._id + +Math.floor(Math.random() * 1000) + 1}
             id={item._id}
             title={item.title}
             rating={item.rating}

@@ -2,14 +2,12 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import React, { useEffect, useState } from "react";
 import CurrencyFormat from "react-currency-format";
 import { Link, useHistory } from "react-router-dom";
-import { getBasketTotal } from "../../../context/reducer";
 import BasketItem from "../BasketItem/BasketItem";
-import axios from "../../../axios/axios";
 import styles from "./Payment.module.scss";
-import { db } from "../../../firebase/firebase";
 import { useDispatch, useSelector } from "react-redux";
 import * as paymentOrderActions from "../../../store/actions/paymentOrders";
 import { NotificationManager } from "react-notifications";
+import { getBasketTotal } from "../../../store/reducers/products";
 
 const Payment = (props) => {
   const basket = useSelector((state) => state.products.basket);
@@ -22,7 +20,6 @@ const Payment = (props) => {
   const [error, setError] = useState(null);
   const [disabled, setDisabled] = useState(true);
   const [processing, setProcessing] = useState("");
-  // const [clientSecret, setClientSecret] = useState("");
 
   useEffect(() => {
     if (succeeded) {
@@ -54,25 +51,6 @@ const Payment = (props) => {
         },
       })
       .then(({ paymentIntent }) => {
-        // db.collection("users")
-        //   .doc(user?.uid)
-        //   .collection("orders")
-        //   .doc(paymentIntent.id)
-        //   .set({
-        //     basket,
-        //     amount: paymentIntent.amount,
-        //     created: paymentIntent.created,
-        //   });
-
-        // setSucceeded(true);
-        // setError(null);
-        // setProcessing(false);
-
-        // dispatch({
-        //   type: "EMPTY_BASKET",
-        // });
-
-        // history.replace("/orders");
         const payload = {
           userId: user.userId,
           orders: [

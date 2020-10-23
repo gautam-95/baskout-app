@@ -5,17 +5,22 @@
   background-color: #fff;
   position: relative;
 
+  .orderTitle {
+    color: grey;
+  }
+
   > div:first-child {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
-  // .orderId {
-  //   position: absolute;
-  //   top: 40px;
-  //   right: 20px;
-  // }
+  .paymentId {
+    h4 {
+      text-align: right;
+      color: #8d8080;
+    }
+  }
 
   .orderTotal {
     font-weight: 500;
@@ -27,5 +32,19 @@
   .items {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .order {
+    .paymentId {
+      h4 {
+        text-align: left;
+      }
+      margin: 10px 0;
+    }
+  }
+
+  .orderTitle {
+    width: 90%;
+    word-wrap: break-word;
   }
 }

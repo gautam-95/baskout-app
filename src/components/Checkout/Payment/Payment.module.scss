@@ -43,7 +43,7 @@ $primary-color: #51a199;
     div > button {
       background-color: $primary-color;
       margin-top: 10px;
-      padding: 5px 8px;
+      padding: 8px;
       border-radius: 20px;
       border: none;
       color: #fff;
@@ -51,6 +51,7 @@ $primary-color: #51a199;
       transition: all 0.2s ease-in-out;
       cursor: pointer;
       outline: none;
+      width: 60%;
     }
 
     div > button:hover {
@@ -61,6 +62,7 @@ $primary-color: #51a199;
 
   h3 {
     padding-bottom: 20px;
+    padding-top: 10px;
   }
 }
 
@@ -68,6 +70,8 @@ $primary-color: #51a199;
   .container {
     .title {
       flex: 1;
+      min-width: 85px;
+      margin-bottom: 10px;
     }
     > div {
       padding: 20px 0;

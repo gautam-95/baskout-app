@@ -1,6 +1,6 @@
 import * as actionTypes from "./actionTypes";
 import axios from "../../axios/axios";
-import { getBasketTotal } from "../../context/reducer";
+import { getBasketTotal } from "../reducers/products";
 
 export const setPaymentSecret = (secret) => {
   return {
@@ -69,7 +69,6 @@ export const fetchOrders = (userId) => {
       dispatch(setUserOrders(res.data.orders));
     })
     .catch(err => {
-      console.log(err);
       dispatch(setUserOrdersFail(err.response.data))
     });
   };

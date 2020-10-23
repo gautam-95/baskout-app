@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { auth } from "../../firebase/firebase";
 import styles from "./Login.module.scss";
 import logoImg from "../../assets/images/logo.png";
 import { useDispatch, useSelector } from "react-redux";
@@ -22,7 +21,7 @@ const Login = (props) => {
     if (user) {
       dispatch(productActions.fetchProducts());
       history.push("/");
-      NotificationManager.success(`Welcome`, `Success`, 2000);
+      NotificationManager.success(`You are logged in`, `Success`, 2000);
     }
 
     if (error) {
@@ -33,29 +32,11 @@ const Login = (props) => {
   const signIn = (e) => {
     e.preventDefault();
     dispatch(authActions.auth(email, password, false));
-    // auth
-    //   .signInWithEmailAndPassword(email, password)
-    //   .then((auth) => {
-    //     history.push("/");
-    //   })
-    //   .catch((err) => {
-    //     console.log(err.message);
-    //   });
   };
 
   const register = (e) => {
     e.preventDefault();
     dispatch(authActions.auth(email, password, true));
-    // auth
-    //   .createUserWithEmailAndPassword(email, password)
-    //   .then((auth) => {
-    //     if (auth) {
-    //       history.push("/");
-    //     }
-    //   })
-    //   .catch((err) => {
-    //     console.log(err.message);
-    //   });
   };
 
   return (

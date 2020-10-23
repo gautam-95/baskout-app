@@ -6,8 +6,29 @@
   }
 }
 
+.noOrdersSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #afafaf;
+  .shoppingIcon {
+    cursor: pointer;
+    font-size: 400px;
+  }
+
+  .shoppingIcon:hover {
+    color: #829c99;
+  }
+}
+
 @media (max-width: 500px) {
   .orders {
     padding: 20px 35px;
+  }
+
+  .noOrdersSection {
+    .shoppingIcon {
+      font-size: 265px;
+    }
   }
 }

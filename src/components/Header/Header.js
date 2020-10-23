@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "./Header.module.scss";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link, useLocation } from "react-router-dom";
-import { auth } from "../../firebase/firebase";
 import logo from "../../assets/images/logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -69,12 +68,14 @@ const Header = (props) => {
             <span>{user ? "Sign out" : "Sign in"}</span>
           </div>
         </Link>
-        <Link to="/orders">
-          <div className={styles.option}>
-            <span>Your</span>
-            <span>Orders</span>
-          </div>
-        </Link>
+        {user ? (
+          <Link to="/orders">
+            <div className={styles.option}>
+              <span>Your</span>
+              <span>Orders</span>
+            </div>
+          </Link>
+        ) : null}
         <Link to="/checkout">
           <div className={styles.optionBasket}>
             <ShoppingBasketIcon />

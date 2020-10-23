@@ -20,7 +20,6 @@ const Checkout = (props) => {
         <div>
           <h3>Hello {user?.email}</h3>
           <h2 className={styles.title}>Your Shopping Basket</h2>
-          {/* <FlipMove> */}
           {basket.map((item) => (
             <BasketItem
               key={item.id + Math.floor(Math.random() * 1000) + 1}
@@ -31,7 +30,6 @@ const Checkout = (props) => {
               image={item.image}
             />
           ))}
-          {/* </FlipMove> */}
         </div>
       </div>
       <div>

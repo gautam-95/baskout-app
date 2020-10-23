@@ -33,7 +33,7 @@ exports.loginUser = (req, res) => {
     .then((user) => {
       if (!user) {
         return res.status(401).json({
-          message: "User not found",
+          message: "User not registered",
         });
       }
       fetchedUser = user;
