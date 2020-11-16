@@ -48,7 +48,7 @@ const Header = (props) => {
         open={isSidebarOpen}
         onClose={toggleDrawer("left", false)}
       >
-        <Sidebar user={user} itemClicked={() => setIsSidebarOpen(false)} />
+        <Sidebar user={user} onLogout={() => handleAuth()} itemClicked={() => setIsSidebarOpen(false)} />
       </Drawer>
 
       <div className={styles.alignCenter}>

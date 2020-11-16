@@ -6,7 +6,7 @@ import ListAltIcon from "@material-ui/icons/ListAlt";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 
-const Sidebar = ({ user, itemClicked }) => {
+const Sidebar = ({ user, itemClicked, onLogout }) => {
   return (
     <div className={styles.sideBar}>
       <Link className={styles.brand} to="/">
@@ -14,11 +14,17 @@ const Sidebar = ({ user, itemClicked }) => {
       </Link>
       <span>{user ? user.email : "Guest"}</span>
       <div>
-        <SidebarItem Icon={ListAltIcon} item="Your Orders" itemClicked={itemClicked} link="/orders"/>
         <SidebarItem
+          Icon={ListAltIcon}
+          item="Your Orders"
+          itemClicked={itemClicked}
+          link="/orders"
+        />
+        <SidebarItem
+          onLogout={onLogout}
           Icon={ExitToAppIcon}
           item={user ? "Sign out" : "Sign in"}
-          link="/login"
+          // link="/login"
         />
       </div>
     </div>
