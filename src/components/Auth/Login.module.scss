@@ -9,7 +9,7 @@ $primary-color: #51a199;
   height: 100vh;
   background-color: #fff;
   // background-image: url(/static/media/login-bg.573e8449.jpg);
-  background-image: url('../../assets/images/login-bg.jpg');
+  background-image: url("../../assets/images/login-bg.jpg");
   background-size: cover;
   background-position: bottom;
   // mask-image: linear-gradient(to bottom right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6));
@@ -98,6 +98,16 @@ $primary-color: #51a199;
   height: 30px;
   margin-top: 10px;
   border-color: darkgray;
+}
+
+.helpText {
+  font-size: 12px;
+  color: #24655e;
+  margin-top: 8px;
+  font-weight: 500;
+  span {
+    color:#189a18;
+  }
 }
 
 @media (max-width: 500px) {

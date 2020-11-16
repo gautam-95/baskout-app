@@ -67,8 +67,8 @@ const Payment = (props) => {
   };
 
   const handleChange = (e) => {
-    setDisabled(e.empty);
     setError(e.error ? e.error.message : "");
+    setDisabled(e.empty || e.error);
   };
 
   return (
@@ -123,6 +123,10 @@ const Payment = (props) => {
                 <button disabled={processing || disabled || succeeded}>
                   <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                 </button>
+                <div className={styles.helpText}>
+                  Use<span> 4242 4242 4242 4242 | Any future Date | Any 3 digits </span>for
+                  test
+                </div>
               </div>
               {error && <div>{error}</div>}
             </form>

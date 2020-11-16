@@ -66,6 +66,14 @@ $primary-color: #51a199;
   }
 }
 
+.helpText {
+  font-size: 12px;
+  color: #a7a5a5;
+  span {
+    color: #189a18;
+  }
+}
+
 @media (max-width: 500px) {
   .container {
     .title {
@@ -83,5 +91,4 @@ $primary-color: #51a199;
   .details {
     flex: 1;
   }
-
 }

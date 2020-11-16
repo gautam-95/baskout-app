@@ -80,6 +80,9 @@ const Login = (props) => {
         >
           Create your Baskout accout
         </button>
+        <span className={styles.helpText}>
+          Use <span> user1@baskout.com/123456 </span>for Test user
+        </span>
       </div>
     </div>
   );
