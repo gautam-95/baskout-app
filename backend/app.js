@@ -49,6 +49,6 @@ app.use("/api/product", productRoutes);
 app.use("/api/payments", paymentRoutes);
 app.use("/api/orders", orderRoutes);
 
-app.listen(4000, () => {
+app.listen(process.env.PORT || 4000, () => {
   console.log("Server is running!");
 });
