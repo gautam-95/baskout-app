@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://arcane-plateau-30623.herokuapp.com/api",
+  baseURL: "https://baskout-app-be.onrender.com/api",
 });
 
 instance.interceptors.request.use((request) => {
