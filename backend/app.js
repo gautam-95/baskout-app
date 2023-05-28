@@ -12,7 +12,7 @@ const orderRoutes = require("./routes/orderRoutes");
 const app = express();
 
 mongoose
-  .connect(config.dbUrl)
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("Connected to DB");
   })
