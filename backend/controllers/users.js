@@ -1,7 +1,6 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
-const config = require("../config");
 const User = require("../models/user");
 
 exports.signUpUser = (req, res) => {
